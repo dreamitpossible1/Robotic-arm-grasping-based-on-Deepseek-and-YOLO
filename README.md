@@ -1,8 +1,8 @@
 ## Project Title
-A Robot System for RB3 Gen2 Utilizing Deepseek and YOLO
+Robotic Arm Grasping System for RB3 Gen2 Based on Deepseek and YOLO
 
 ## Overview
-This project develops a robot arm system for RB3 Gen2 using depth images. RB3 Gen2 serves as the core hardware platform, offering advanced motion control and sensor capabilities. Depth images enable the robot arm to perceive 3D environments for tasks like object recognition and grasping. The Qualcomm Intelligent Robotics Product SDK is utilized for efficient image processing and seamless integration with RB3 Gen2, enhancing the system's performance and reliability.
+This project presents a robotic arm grasping system for RB3 Gen2, powered by Deepseek and YOLO. The RB3 Gen2 hardware platform provides a solid foundation with its advanced motion control and sensor technology. YOLO is harnessed for real-time object detection, swiftly identifying objects within the environment. Deepseek contributes to the system's decision-making process, analyzing data to determine optimal grasping strategies. Together, these elements enable the robotic arm to perform efficient and precise grasping tasks, with the Qualcomm Intelligent Robotics Product SDK ensuring smooth integration and enhancing the overall reliability of the system.
 ## Quick Start with QualComm RB3 gen2
 Download the precompiled package for RB3 Gen2：
 
