@@ -15,7 +15,7 @@ unzip arm-qcom-6.6.65-QLI.1.4-Ver.1.1_robotics-product-sdk-1.1.zip
 The specific content is as follows:[QualComm Intelligent Robotics Product SDK Quick Start]([QIRP User Guide - Qualcomm® Linux Documentation](https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-265/quick-start_3.html?vproduct=1601111740013072&version=1.4&facet=Qualcomm Intelligent Robotics Product (QIRP) SDK)
 
 
-## 功能包说明packages-overview
+## packages-overview
 
 * ***sagittarius_descriptions*** : 机械臂的描述功能包。
 * ***sagittarius_moveit*** : 机械臂的moveit功能包。
@@ -23,16 +23,16 @@ The specific content is as follows:[QualComm Intelligent Robotics Product SDK Qu
 
 * ***sagittarius_perception*** : 本项目的功能包
 
-## 使用usage
+## usage
 
-### 系统要求 Prequirement
+### Prequirement
 
 * System:	Ubuntu 16.04 ,Ubuntu 18.04 or Ubuntu 20.04
 * ROS Version:	kinetic, melodic or noetic
 * DeekSeek: model="deepseek-r1:14b" or higher,
             url="http://localhost:11434/api/generate"
 
-### 下载安装 Download and install
+###  Download and install
 * 下载工作空间 Download the workspace:
 ```yaml
     cd ~
