@@ -5,7 +5,7 @@ import socket
 
 # 初始化客户端
 client = OpenAI(
-    api_key="sk-b765ec4ae6e64e8b8e754ffa4abfe957",
+    api_key="sk-**********************",
     base_url="https://api.deepseek.com"
 )
 
