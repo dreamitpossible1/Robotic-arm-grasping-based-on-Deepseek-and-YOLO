@@ -79,3 +79,10 @@ git clone https://github.com/uArm-Developer/uArm-Python-SDK.git
     输入需求，机械臂会根据需求抓取物体同时会话反馈
 
 ```
+
+
+## Reference
+
+- [Qualcomm Linux](https://www.qualcomm.com/developer/software/qualcomm-linux)
+
+- [QualComm Intelligent Robotics Product SDK](https://docs.qualcomm.com/bundle/publicresource/topics/80-70018-265/introduction_1.html?vproduct=1601111740013072&version=1.4&facet=Qualcomm Intelligent Robotics Product (QIRP) SDK)
