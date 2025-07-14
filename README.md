@@ -48,6 +48,39 @@ This project is based on the uArm Swift Pro robotic arm, which mainly consists o
  
 > ✳️ The uArm Swift Pro is a four-axis (4-DoF) robotic manipulator known for its high precision and repeatability, making it ideal for lightweight object manipulation and interactive gaming tasks.
 
+## Run the System
+Follow these steps to deploy and launch the robot arm system based on depth images:
+1. Clone the Repository
+```bash
+git clone https://github.com/dreamitpossible1/Robotic-arm-grasping-based-on-Deepseek-and-YOLO.git
+```
+2. Set Permissions and Run Script
+```bash
+cd Robotic-arm-grasping-based-on-Deepseek-and-YOLO/src
+chmod +x run_label.sh
+./run_label.sh
+```
+
+<p align="center"> <img src="https://github.com/dreamitpossible1/Robotic-arm-grasping-based-on-Deepseek-and-YOLO/blob/main/results/4.jpg" alt="Script Step 1" /> </p> <p align="center"> <img src="https://github.com/dreamitpossible1/Robotic-arm-grasping-based-on-Deepseek-and-YOLO/blob/main/results/5.png" alt="Script Step 2" /> </p>
+
+3. Launch the DeepSeek
+```bash
+python yolo_server.py
+```
+
+4. Control the grabbing of the robotic arm
+```bash
+python yolo_user.py
+```
+
+📹 Results Display
+
+[Display](https://github.com/dreamitpossible1/Robotic-arm-grasping-based-on-Deepseek-and-YOLO/blob/main/results/Robotic-arm-grasping-based-on-Deepseek-and-YOLO.mp4)
+
+
+
+
+
 
 ## packages-overview
 
