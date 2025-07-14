@@ -6,7 +6,9 @@ This project presents a robotic arm grasping system for RB3 Gen2, powered by Dee
 ## Quick Start with QualComm RB3 gen2
 Download the precompiled package for RB3 Gen2：
 
-Download [arm-qcom-6.6.65-QLI.1.4-Ver.1.1_robotics-product-sdk-1.1.zip](https://artifacts.codelinaro.org/artifactory/qli-ci/flashable-binaries/qirpsdk/qcs6490-rb3gen2-vision-kit/arm-qcom-6.6.65-QLI.1.4-Ver.1.1_robotics-product-sdk-1.1.zip)
+```bash
+wget https://artifacts.codelinaro.org/artifactory/qli-ci/flashable-binaries/qirpsdk/qcs6490-rb3gen2-vision-kit/arm-qcom-6.6.65-QLI.1.4-Ver.1.1_robotics-product-sdk-1.1.zip
+```
 
 Use the following command to unzip the package:
 ```bash
@@ -35,6 +37,16 @@ git clone https://github.com/uArm-Developer/uArm-Python-SDK.git
 ```bash
    python setup.py install
 ```
+
+## 🦾 Project Overview
+
+This project is based on the uArm Swift Pro robotic arm, which mainly consists of the following components:
+
+- **End Effector**: Equipped with a suction pump, used for picking up and moving Mahjong tiles.
+- **Drive System**: Composed of four servo motors, each controlling one degree of freedom (4-DoF), enabling precise and smooth motion control.
+- **Control System**: An integrated controller that supports both Arduino and Python development environments, serving as the core control unit of the robotic arm.
+ 
+> ✳️ The uArm Swift Pro is a four-axis (4-DoF) robotic manipulator known for its high precision and repeatability, making it ideal for lightweight object manipulation and interactive gaming tasks.
 
 
 ## packages-overview
