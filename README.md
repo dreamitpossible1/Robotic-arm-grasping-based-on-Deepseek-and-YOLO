@@ -6,7 +6,7 @@ This project presents a robotic arm grasping system for RB3 Gen2, powered by Dee
 ## Quick Start with QualComm RB3 gen2
 Download the precompiled package for RB3 Gen2：
 
-wget https://artifacts.codelinaro.org/artifactory/qli-ci/flashable-binaries/qirpsdk/qcs6490-rb3gen2-vision-kit/arm-qcom-6.6.65-QLI.1.4-Ver.1.1_robotics-product-sdk-1.1.zip
+wget [arm-qcom-6.6.65-QLI.1.4-Ver.1.1_robotics-product-sdk-1.1.zip](https://artifacts.codelinaro.org/artifactory/qli-ci/flashable-binaries/qirpsdk/qcs6490-rb3gen2-vision-kit/arm-qcom-6.6.65-QLI.1.4-Ver.1.1_robotics-product-sdk-1.1.zip)
 
 Use the following command to unzip the package:
 ```bash
