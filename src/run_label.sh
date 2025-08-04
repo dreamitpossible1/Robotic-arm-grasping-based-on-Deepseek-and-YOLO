@@ -1,5 +1,5 @@
 #ng
-python3 label_gst2.py \
+python3 label_gst.py \
     -f 2 \
     -ml yolov5 \
     -m /opt/yolov5x-int8.tflite \
