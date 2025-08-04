@@ -2,11 +2,9 @@ import socket
 import time
 from uarm.wrapper import SwiftAPI
 
-# 创建UDP客户端
-client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-server_address = ("192.168.1.26", 9090)  # 与服务端IP一致
 
-# 主动发送消息给服务端，暴露自己地址
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+server_address = ("192.168.1.26", 9090) 
 client_socket.sendto("Hello, UDP Server!".encode(), server_address)
 print("等待服务端指令...")
 
@@ -20,8 +18,6 @@ try:
             print("执行：抓取杯子的动作！")
             swift.connect()
             time.sleep(2)
-
-            ###############
             swift.set_position(x=200, y=-50, z=150, wait=True)
             print("到达地面:", swift.get_position())
             time.sleep(1)
