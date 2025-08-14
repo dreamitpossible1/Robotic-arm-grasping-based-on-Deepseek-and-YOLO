@@ -3,6 +3,10 @@ Robotic Arm Grasping System for RB3 Gen2 Based on Deepseek and YOLO
 
 ## Overview
 This project presents a robotic arm grasping system for RB3 Gen2, powered by Deepseek and YOLO. The RB3 Gen2 hardware platform provides a solid foundation with its advanced motion control and sensor technology. YOLO is harnessed for real-time object detection, swiftly identifying objects within the environment. Deepseek contributes to the system's decision-making process, analyzing data to determine optimal grasping strategies. Together, these elements enable the robotic arm to perform efficient and precise grasping tasks, with the Qualcomm Intelligent Robotics Product SDK ensuring smooth integration and enhancing the overall reliability of the system.
+
+ <p align="center"> <img src="https://github.com/dreamitpossible1/Robotic-arm-grasping-based-on-Deepseek-and-YOLO/blob/main/results/Technical%20flowchart.png" />
+<p align="center"><i>Figure 1: Technical Flowchart</i></p>
+
 ## Quick Start with QualComm RB3 gen2
 Download the precompiled package for RB3 Gen2：
 
