@@ -21,7 +21,7 @@ unzip arm-qcom-6.6.65-QLI.1.4-Ver.1.1_robotics-product-sdk-1.1.zip
  Run Flashing Procedure
 
 ```bash
-cd <extracted zip directory>/target/qcs6490-rb3gen2-vision-kit/qcom-multimedia-image
+cd <extracted zip directory>/target/qcs6490-rb3gen2-vision-kit/qcom-robotics-full-image
 <qdl_tool_path>/qdl_2.3.1/QDL_Linux_x64/qdl prog_firehose_ddr.elf rawprogram*.xml patch*.xml
 ```
 
