@@ -1,7 +1,3 @@
-
-#pyright (c) 2024 Qualcomm Innovation Center, Inc. All rights reserved.
-# SPDX-License-Identifier: BSD-3-Clause-Clear
-
 import os
 import sys
 import signal
@@ -103,19 +99,59 @@ def print_detection_results(sink, buffer, info, data):
             bytes_data = bytes(map_info.data)
             text = bytes_data.decode('utf-8')
             
-            # Extract labels and update current objects
+            # Extract labels
             current_labels = extract_label(text)
             
-            # Only print the current objects detected
+            # Parse coordinates for center calculation
+            center_info = []
             if current_labels:
-                print("Current objects detected:", ", ".join(current_labels))
+                # Updated pattern to match the actual format with multiple backslashes
+                coord_pattern = r'rectangle\\*=\\*\(float\\*\)\\*<\\*\s*([^>]+?)\\*\s*>\\*'
+                coord_matches = re.findall(coord_pattern, text)
+                
+                for i, label in enumerate(current_labels):
+                    if i < len(coord_matches):
+                        try:
+                            # Clean coordinate string - remove all backslashes and extra spaces
+                            coord_str = coord_matches[i]
+                            # Remove all backslashes and clean up
+                            coord_str = re.sub(r'\\+', '', coord_str)
+                            coord_str = coord_str.replace(' ', '')
+                            
+                            # Split by comma and convert to float
+                            coords = [float(x.strip()) for x in coord_str.split(',') if x.strip()]
+                            
+                            if len(coords) == 4:
+                                norm_x, norm_y, norm_w, norm_h = coords
+                                
+                                # Convert to pixel coordinates (1280x720)
+                                pixel_x = int(norm_x * 1280)
+                                pixel_y = int(norm_y * 720)
+                                pixel_w = int(norm_w * 1280)
+                                pixel_h = int(norm_h * 720)
+                                
+                                # Calculate center point
+                                center_x = pixel_x + pixel_w // 2
+                                center_y = pixel_y + pixel_h // 2
+                                
+                                center_info.append(f"{label}: Center({center_x}, {center_y})")
+                            else:
+                                center_info.append(f"{label}: Center(0, 0)")
+                        except Exception as e:
+                            center_info.append(f"{label}: Center(0, 0)")
+                    else:
+                        center_info.append(f"{label}: Center(0, 0)")
+            
+            # Print current objects with center points
+            if center_info:
+                print("Current objects detected:", ", ".join(center_info))
             else:
                 print("No objects currently detected")
             
-            # Still update the file but without printing
+            # Write to file
             with open(OUTPUT_FILE, 'w') as f:
-                for label in current_labels:
-                    f.write(f"{label}\n")
+                for info in center_info:
+                    f.write(f"{info}\n")
                 
             buffer.unmap(map_info)
         return Gst.FlowReturn.OK
